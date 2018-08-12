@@ -1,0 +1,1 @@
+var navButton=document.getElementById("nav-toggle-button");function toggleNavDisplay(t){t.preventDefault(),document.getElementById("mainNavigation").classList.toggle("showNav")}navButton.addEventListener("click",toggleNavDisplay),window.sr=ScrollReveal();
