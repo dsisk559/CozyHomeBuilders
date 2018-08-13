@@ -190,7 +190,6 @@ html {
   box-sizing: inherit; }
 
 body {
-  font-size: 18px;
   line-height: 1.6;
   color: black;
   -webkit-font-smoothing: antialiased;
@@ -302,8 +301,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin: 0 0 20px 0;
-  font-weight: 400;
-  font-size: 14px; }
+  font-weight: 400; }
 
 em {
   font-style: italic; }
@@ -393,6 +391,17 @@ li.nav-toggle {
   .main-nav li a {
     padding: 10px 15px; } }
 
+.icon-card {
+  display: block;
+  text-align: center;
+  border-bottom: 3px #9C835B solid;
+  z-index: 9; }
+  .icon-card img {
+    margin: 10px 35px 0; }
+  .icon-card h2 {
+    font-size: 1.6rem;
+    margin: 0 0 10px; }
+
 .hero {
   background-image: radial-gradient(circle, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%), url(../img/charles-finn-tiny-house-outside-walden-thoreau_h.jpg);
   background-repeat: no-repeat;
@@ -402,10 +411,12 @@ li.nav-toggle {
   text-align: center;
   position: relative;
   z-index: 0; }
-  .hero .wrapper {
+  .hero .hero-text {
+    display: inline-block;
     position: absolute;
+    width: 100%;
     top: 50%;
-    transform: translateY(-50%); }
+    transform: translate3d(-50%, -50%, 0); }
   .hero h1, .hero p {
     color: #fff;
     text-shadow: 0 2px 6px #111;
@@ -417,3 +428,17 @@ li.nav-toggle {
         margin-top: 0; } }
   .hero .button {
     box-shadow: 0 2px 6px #111; }
+
+.process .wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
+  margin-top: calc((90vw - 400px) / -8);
+  z-index: 2; }
+  @media screen and (max-width: 800px) {
+    .process .wrapper {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 0; } }
+  @media screen and (max-width: 450px) {
+    .process .wrapper {
+      display: block; } }
