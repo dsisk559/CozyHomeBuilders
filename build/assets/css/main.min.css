@@ -190,9 +190,8 @@ html {
   box-sizing: inherit; }
 
 body {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.6;
-  font-size: 14px;
   color: black;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
@@ -211,19 +210,13 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   display: inline-block;
-  padding: 20px 60px;
-  color: black;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
+  background: #658EB0;
+  padding: 10px 40px;
+  border-radius: 100px;
+  color: #fff;
   text-decoration: none;
-  white-space: nowrap;
-  background-color: white;
-  border-radius: 4px;
-  cursor: pointer;
-  box-sizing: border-box;
-  transition: all 0.2s ease; }
+  font-size: 1.4rem;
+  font-weight: 900; }
   .button:hover, .button:active, .button:focus,
   button:hover,
   button:active,
@@ -237,9 +230,8 @@ input[type="button"] {
   input[type="button"]:hover,
   input[type="button"]:active,
   input[type="button"]:focus {
-    outline: 0;
-    transform: scale(1.01);
-    transform: translateY(3px); }
+    background: #CEE4F7;
+    color: #111; }
 
 a {
   color: #0074D9;
@@ -364,7 +356,7 @@ li.nav-toggle {
     li.nav-toggle a img {
       height: 20px; }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1020px) {
   li.nav-toggle {
     display: block; }
   .responsive-nav {
@@ -381,7 +373,8 @@ li.nav-toggle {
     background: #2C3033;
     position: absolute;
     top: 70px;
-    right: 0; }
+    right: 0;
+    z-index: 100; }
     .showNav .responsive-nav li {
       display: block; }
     .showNav .responsive-nav a {
@@ -399,3 +392,28 @@ li.nav-toggle {
     height: 30px; }
   .main-nav li a {
     padding: 10px 15px; } }
+
+.hero {
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%), url(../img/charles-finn-tiny-house-outside-walden-thoreau_h.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh - 91px);
+  min-height: 500px;
+  text-align: center;
+  position: relative;
+  z-index: 0; }
+  .hero .wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+  .hero h1, .hero p {
+    color: #fff;
+    text-shadow: 0 2px 6px #111;
+    line-height: 1; }
+  .hero p {
+    margin-top: -25px; }
+    @media only screen and (max-width: 680px) {
+      .hero p {
+        margin-top: 0; } }
+  .hero .button {
+    box-shadow: 0 2px 6px #111; }
