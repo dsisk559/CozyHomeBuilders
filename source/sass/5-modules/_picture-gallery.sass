@@ -1,0 +1,25 @@
+.gallery .wrapper
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-gap: 25px
+  margin-top: 25px
+
+  @media screen and (max-width: 800px)
+    grid-template-columns: repeat(2,1fr)
+
+  @media screen and (max-width: 450px)
+    grid-template-columns: 1fr
+
+  .item
+    overflow: hidden
+    height: 25vw
+
+    @media screen and (max-width: 800px)
+      height: 40vw
+
+    @media screen and (max-width: 450px)
+      height: 90vw
+
+    a img
+      width: 100%
+      height: auto

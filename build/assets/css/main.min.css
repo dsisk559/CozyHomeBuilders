@@ -402,6 +402,30 @@ li.nav-toggle {
     font-size: 1.6rem;
     margin: 0 0 10px; }
 
+.gallery .wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  margin-top: 25px; }
+  @media screen and (max-width: 800px) {
+    .gallery .wrapper {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media screen and (max-width: 450px) {
+    .gallery .wrapper {
+      grid-template-columns: 1fr; } }
+  .gallery .wrapper .item {
+    overflow: hidden;
+    height: 25vw; }
+    @media screen and (max-width: 800px) {
+      .gallery .wrapper .item {
+        height: 40vw; } }
+    @media screen and (max-width: 450px) {
+      .gallery .wrapper .item {
+        height: 90vw; } }
+    .gallery .wrapper .item a img {
+      width: 100%;
+      height: auto; }
+
 .hero {
   background-image: radial-gradient(circle, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%), url(../img/charles-finn-tiny-house-outside-walden-thoreau_h.jpg);
   background-repeat: no-repeat;
