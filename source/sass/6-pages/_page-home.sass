@@ -11,7 +11,7 @@
   .hero-text
     display: inline-block
     position: absolute
-    width: 100%
+    width: 90%
     top: 50%
     transform: translate3d(-50%, -50%, 0)
 
@@ -34,14 +34,13 @@
   display: grid
   grid-template-columns: repeat(4,1fr)
   grid-gap: 40px
-  margin-top: calc((90vw - 400px) / -8)
+  margin-top: 30px
   z-index: 2
 
   @media screen and (max-width: 800px)
     grid-template-columns: repeat(2,1fr)
-    margin-top: 0
     
   @media screen and (max-width: 450px)
-    display: block
+    grid-template-columns: 1fr
 
 

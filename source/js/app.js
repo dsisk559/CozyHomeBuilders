@@ -1,3 +1,5 @@
+// Show Navigation
+//-----------------------
 var navButton = document.getElementById("nav-toggle-button");
 
 function toggleNavDisplay(event) {
@@ -9,8 +11,9 @@ function toggleNavDisplay(event) {
 }
 
 navButton.addEventListener("click", toggleNavDisplay);
+
 // JavaScript
-window.sr = ScrollReveal();
+//window.sr = ScrollReveal();
 
 // sr.reveal('h1', {
 //     delay: 0,
@@ -18,3 +21,43 @@ window.sr = ScrollReveal();
 //     origin: 'bottom',
 //     distance: '100px'
 // });
+
+// gallery slider
+//--------------------
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/Previous control
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slide");
+  var dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
