@@ -1,0 +1,27 @@
+.review-card
+    display: grid
+    grid-template-columns: auto auto
+    grid-gap: 20px
+
+    @media screen and (max-width: 450px)
+        grid-template-columns: auto
+
+    img
+        height: 90px
+        width: 90px
+        border-radius: 50%
+        align-self: center
+        justify-self: center
+        
+        @media screen and (max-width: 450px)
+            width: 50%
+            height: auto
+    
+    p
+        align-self: center
+        justify-self: center
+        padding: 0
+        margin: 0
+
+        @media screen and (max-width: 450px)
+            text-align: center

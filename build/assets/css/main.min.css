@@ -477,6 +477,32 @@ li.nav-toggle {
   to {
     opacity: 1; } }
 
+.review-card {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px; }
+  @media screen and (max-width: 450px) {
+    .review-card {
+      grid-template-columns: auto; } }
+  .review-card img {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    align-self: center;
+    justify-self: center; }
+    @media screen and (max-width: 450px) {
+      .review-card img {
+        width: 50%;
+        height: auto; } }
+  .review-card p {
+    align-self: center;
+    justify-self: center;
+    padding: 0;
+    margin: 0; }
+    @media screen and (max-width: 450px) {
+      .review-card p {
+        text-align: center; } }
+
 .hero {
   background-image: radial-gradient(circle, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%), url(../img/charles-finn-tiny-house-outside-walden-thoreau_h.jpg);
   background-repeat: no-repeat;
@@ -516,3 +542,14 @@ li.nav-toggle {
   @media screen and (max-width: 450px) {
     .process .wrapper {
       grid-template-columns: 1fr; } }
+
+.reviews {
+  background: #9C835B;
+  padding: 20px 0; }
+  .reviews .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px; }
+    @media screen and (max-width: 800px) {
+      .reviews .wrapper {
+        grid-template-columns: repeat(1, 1fr); } }
