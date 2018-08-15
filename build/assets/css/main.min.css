@@ -215,7 +215,8 @@ input[type="button"] {
   color: #fff;
   text-decoration: none;
   font-size: 1.4rem;
-  font-weight: 900; }
+  font-weight: 900;
+  border: 0; }
   .button:hover, .button:active, .button:focus,
   button:hover,
   button:active,
@@ -276,7 +277,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .large, h2 {
   font-size: 42px;
-  line-height: 1.14; }
+  line-height: 1.14;
+  font-variant: small-caps;
+  font-weight: 500; }
   @media only screen and (max-width: 680px) {
     .large, h2 {
       font-size: 32px; } }
@@ -391,6 +394,10 @@ li.nav-toggle {
   .main-nav li a {
     padding: 10px 15px; } }
 
+footer {
+  border-top: 2px green dotted;
+  height: 10vh; }
+
 .icon-card {
   display: block;
   text-align: center;
@@ -406,6 +413,7 @@ li.nav-toggle {
         margin: 10px 75px; } }
   .icon-card h2 {
     font-size: 1.6rem;
+    font-variant: normal;
     margin: 0 0 10px; }
 
 .slideshow-container {
@@ -503,6 +511,94 @@ li.nav-toggle {
       .review-card p {
         text-align: center; } }
 
+.post-preview {
+  display: block;
+  margin: 40px 0;
+  float: right; }
+
+.post-image {
+  display: block;
+  width: 35%;
+  float: left; }
+  .post-image img {
+    width: 100%;
+    height: auto; }
+
+.post-text {
+  display: block;
+  width: 60%;
+  float: right; }
+  .post-text h2 {
+    margin: 0 0 30px; }
+
+.post-preview:nth-child(even) .post-image {
+  float: right; }
+
+.post-preview:nth-child(even) .post-text {
+  float: left; }
+
+@media screen and (max-width: 800px) {
+  .post-preview {
+    text-align: center; }
+  .post-image {
+    display: inline-block;
+    width: 50%;
+    float: none; }
+  .post-text {
+    width: 100%;
+    float: none; }
+    .post-text h2 {
+      margin: 30px 0; }
+    .post-text p {
+      text-align: left; }
+  .post-preview:nth-child(even) .post-image {
+    float: none; }
+  .post-preview:nth-child(even) .post-text {
+    float: none; } }
+
+@media screen and (max-width: 400px) {
+  .post-image {
+    width: 75%; } }
+
+@media screen {
+  .get-in-touch label {
+    display: none; } }
+
+.get-in-touch {
+  display: grid;
+  grid-template-columns: 25% 40% 25%;
+  grid-template-rows: auto;
+  grid-template-areas: "name email phone" "subject subject send";
+  grid-gap: 5%;
+  grid-row-gap: 25px; }
+  @media screen and (max-width: 750px) {
+    .get-in-touch {
+      grid-template-columns: 90%;
+      grid-template-areas: "name" "email" "phone" "subject" "send"; } }
+  .get-in-touch input[type="text"], .get-in-touch input[type="email"], .get-in-touch textarea {
+    padding: 12px;
+    border: 1px #5b646a solid;
+    border-radius: 5px;
+    box-sizing: border-box; }
+  .get-in-touch #name {
+    grid-area: name; }
+  .get-in-touch #email {
+    grid-area: email; }
+  .get-in-touch #phone {
+    grid-area: phone; }
+  .get-in-touch #subject {
+    grid-area: subject;
+    height: 6rem; }
+    @media screen and (max-width: 750px) {
+      .get-in-touch #subject {
+        hieght: 10rem; } }
+  .get-in-touch .button {
+    grid-area: send;
+    align-self: flex-end; }
+    @media screen and (max-width: 750px) {
+      .get-in-touch .button {
+        place-self: center; } }
+
 .hero {
   background-image: radial-gradient(circle, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%), url(../img/charles-finn-tiny-house-outside-walden-thoreau_h.jpg);
   background-repeat: no-repeat;
@@ -545,7 +641,7 @@ li.nav-toggle {
 
 .reviews {
   background: #9C835B;
-  padding: 20px 0; }
+  padding: 40px 0; }
   .reviews .wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -553,3 +649,16 @@ li.nav-toggle {
     @media screen and (max-width: 800px) {
       .reviews .wrapper {
         grid-template-columns: repeat(1, 1fr); } }
+
+.articles {
+  margin: 35px 0; }
+
+.contact-form {
+  background: #9C835B;
+  color: #fff;
+  padding: 40px 0;
+  margin-bottom: 20px; }
+  .contact-form h2 {
+    color: #fff;
+    margin-top: 0;
+    font-variant: normal; }

@@ -1,0 +1,53 @@
+.post-preview
+  display: block
+  margin: 40px 0
+  float: right
+
+.post-image
+  display: block
+  width: 35%
+  float: left
+
+  img
+    width: 100%
+    height: auto
+
+.post-text
+  display: block
+  width: 60%
+  float: right 
+  tet
+  
+  h2
+    margin: 0 0 30px
+
+.post-preview:nth-child(even)
+  .post-image
+    float: right
+  .post-text
+    float: left
+
+@media screen and (max-width: 800px)
+  .post-preview
+    text-align: center
+  .post-image
+    display: inline-block
+    width: 50%
+    float: none
+  .post-text
+    width: 100%
+    float: none
+    h2
+      margin: 30px 0
+    p
+      text-align: left
+    
+  .post-preview:nth-child(even)
+    .post-image
+      float: none
+    .post-text
+      float: none
+
+@media screen and (max-width: 400px)
+  .post-image
+    width: 75%

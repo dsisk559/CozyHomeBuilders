@@ -1,0 +1,41 @@
+@media screen
+    .get-in-touch label
+        display: none
+
+.get-in-touch
+    display: grid
+    grid-template-columns: 25% 40% 25%
+    grid-template-rows: auto
+    grid-template-areas: "name email phone" "subject subject send"
+    grid-gap: 5%
+    grid-row-gap: 25px
+
+    @media screen and (max-width: 750px)
+      grid-template-columns: 90%
+      grid-template-areas: "name" "email" "phone" "subject" "send"
+
+
+    input[type="text"], input[type="email"], textarea
+      padding: 12px
+      border: 1px lighten($slate, 20) solid
+      border-radius: 5px
+      box-sizing: border-box
+
+    #name
+      grid-area: name
+    #email
+      grid-area: email
+    #phone
+      grid-area: phone
+    #subject
+      grid-area: subject
+      height: 6rem
+      @media screen and (max-width: 750px)
+        hieght: 10rem
+    .button
+      grid-area: send
+      align-self: flex-end
+      @media screen and (max-width: 750px)
+        place-self: center
+    
+       
