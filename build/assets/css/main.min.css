@@ -335,6 +335,8 @@ hr {
       height: 50px; }
     .main-nav li.logo a {
       padding: 0; }
+    .main-nav li.logo a:hover svg .cls-1, .main-nav li.logo a:hover svg .cls-3 {
+      fill: #9C835B; }
   .main-nav li {
     list-style: none;
     display: inline-block; }
@@ -347,7 +349,7 @@ hr {
       font-size: 1.25rem;
       font-weight: 900; }
     .main-nav li a:hover, .main-nav li a:active {
-      color: #aaa; }
+      color: #9C835B; }
 
 li.nav-toggle {
   display: none; }
@@ -395,8 +397,30 @@ li.nav-toggle {
     padding: 10px 15px; } }
 
 footer {
-  border-top: 2px green dotted;
-  height: 10vh; }
+  text-align: center; }
+  footer .social a {
+    color: #2C3033;
+    font-size: 1.8rem;
+    letter-spacing: 1ch; }
+  footer .social a:hover {
+    color: #9C835B; }
+  footer .footer-nav {
+    margin: 10px 0; }
+    footer .footer-nav a {
+      color: #2C3033;
+      padding: 0 5px; }
+    footer .footer-nav a:hover {
+      color: #9C835B; }
+  footer .contact-info {
+    display: inline; }
+    footer .contact-info p {
+      display: inline-block;
+      padding: 0 15px;
+      margin-bottom: 10px; }
+      footer .contact-info p a {
+        color: #2C3033; }
+      footer .contact-info p a:hover {
+        color: #9C835B; }
 
 .icon-card {
   display: block;
