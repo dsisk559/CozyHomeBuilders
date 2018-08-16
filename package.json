@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A consept websit for a fictional tiny house builder company",
   "main": "index.html",
+  "homepage": "https://dsisk559.github.io/CozyHomeBuilders",
   "scripts": {
     "deploy": "gh-pages -d build"
   },
