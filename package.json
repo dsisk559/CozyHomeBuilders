@@ -4,7 +4,7 @@
   "description": "A consept websit for a fictional tiny house builder company",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d build"
   },
   "author": "Daniel Sisk",
   "license": "",
@@ -24,6 +24,7 @@
     "scrollreveal": "^3.3.6"
   },
   "dependencies": {
+    "gh-pages": "^1.2.0",
     "swiper": "^4.3.5"
   }
 }
